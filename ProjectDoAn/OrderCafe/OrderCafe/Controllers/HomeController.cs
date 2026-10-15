@@ -8,7 +8,7 @@ namespace OrderCafe.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult GiaoDien()
         {
             return View();
         }

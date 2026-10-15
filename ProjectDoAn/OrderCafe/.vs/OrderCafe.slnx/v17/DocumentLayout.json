@@ -3,22 +3,26 @@
   "WorkspaceRootPath": "D:\\Repo\\OrderCafe\\ProjectDoAn\\OrderCafe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|d:\\repo\\ordercafe\\projectdoan\\ordercafe\\ordercafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|d:\\repo\\ordercafe\\projectdoan\\ordercafe\\ordercafe\\views\\home\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\home\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|D:\\Repo\\OrderCafe\\ProjectDoAn\\OrderCafe\\ordercafe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|d:\\repo\\ordercafe\\projectdoan\\ordercafe\\ordercafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 202,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,18 +41,31 @@
               "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GiaoDien.cshtml",
+              "DocumentMoniker": "D:\\Repo\\OrderCafe\\ProjectDoAn\\OrderCafe\\OrderCafe\\Views\\Home\\GiaoDien.cshtml",
+              "RelativeDocumentMoniker": "OrderCafe\\Views\\Home\\GiaoDien.cshtml",
+              "ToolTip": "D:\\Repo\\OrderCafe\\ProjectDoAn\\OrderCafe\\OrderCafe\\Views\\Home\\GiaoDien.cshtml",
+              "RelativeToolTip": "OrderCafe\\Views\\Home\\GiaoDien.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-15T07:50:02.104Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_MasterLayout.cshtml",
               "DocumentMoniker": "D:\\Repo\\OrderCafe\\ProjectDoAn\\OrderCafe\\OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
               "RelativeDocumentMoniker": "OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
               "ToolTip": "D:\\Repo\\OrderCafe\\ProjectDoAn\\OrderCafe\\OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
               "RelativeToolTip": "OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-10-06T09:13:02.033Z",
               "EditorCaption": ""
@@ -61,9 +78,10 @@
               "RelativeDocumentMoniker": "OrderCafe\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\Repo\\OrderCafe\\ProjectDoAn\\OrderCafe\\OrderCafe\\Controllers\\HomeController.cs",
               "RelativeToolTip": "OrderCafe\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-06T09:12:13.408Z"
+              "WhenOpened": "2026-10-06T09:12:13.408Z",
+              "EditorCaption": ""
             }
           ]
         }
