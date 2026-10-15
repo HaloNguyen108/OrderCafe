@@ -1,0 +1,6 @@
+# Local Visual Studio state and generated build output
+.vs/
+[Bb]in/
+[Oo]bj/
+*.csproj.user
+*.suo

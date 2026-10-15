@@ -10,6 +10,11 @@ namespace OrderCafe.Controllers
     {
         public ActionResult Index()
         {
+            return View("GiaoDien");
+        }
+
+        public ActionResult GiaoDien()
+        {
             return View();
         }
 
