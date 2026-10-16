@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\RepoOrderCafe\\OrderCafe\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\shared\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\shared\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\home\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\home\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,22 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\home\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\shared\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\shared\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\home\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\home\\giaodien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\content\\giaodien.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -59,6 +63,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Account\\Index.cshtml",
+              "RelativeDocumentMoniker": "OrderCafe\\Views\\Account\\Index.cshtml",
+              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Account\\Index.cshtml",
+              "RelativeToolTip": "OrderCafe\\Views\\Account\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-16T06:38:20.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "OrderCafe\\Controllers\\AccountController.cs",
@@ -71,39 +88,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RouteConfig.cs",
-              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\App_Start\\RouteConfig.cs",
-              "RelativeDocumentMoniker": "OrderCafe\\App_Start\\RouteConfig.cs",
-              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\App_Start\\RouteConfig.cs",
-              "RelativeToolTip": "OrderCafe\\App_Start\\RouteConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T06:36:40.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Menu.cshtml",
-              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\Menu.cshtml",
-              "RelativeDocumentMoniker": "OrderCafe\\Views\\Home\\Menu.cshtml",
-              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\Menu.cshtml",
-              "RelativeToolTip": "OrderCafe\\Views\\Home\\Menu.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T04:40:10.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "_MasterLayout.cshtml",
               "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
               "RelativeDocumentMoniker": "OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
-              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
-              "RelativeToolTip": "OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Shared\\_MasterLayout.cshtml*",
+              "RelativeToolTip": "OrderCafe\\Views\\Shared\\_MasterLayout.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-10-16T04:21:48.482Z",
               "EditorCaption": ""
@@ -111,19 +102,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GiaoDien.cshtml",
-              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
-              "RelativeDocumentMoniker": "OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
-              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
-              "RelativeToolTip": "OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-15T14:51:15.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "OrderCafe\\Views\\Home\\Index.cshtml",
@@ -136,7 +114,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GiaoDien.cshtml",
+              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\GiaoDien.cshtml",
+              "RelativeDocumentMoniker": "OrderCafe\\Views\\Home\\GiaoDien.cshtml",
+              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\GiaoDien.cshtml",
+              "RelativeToolTip": "OrderCafe\\Views\\Home\\GiaoDien.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-16T04:22:01.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GiaoDien.cshtml",
+              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
+              "RelativeDocumentMoniker": "OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
+              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
+              "RelativeToolTip": "OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-15T14:51:15.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "OrderCafe\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "OrderCafe\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:36:40.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Menu.cshtml",
+              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\Menu.cshtml",
+              "RelativeDocumentMoniker": "OrderCafe\\Views\\Home\\Menu.cshtml",
+              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\Menu.cshtml",
+              "RelativeToolTip": "OrderCafe\\Views\\Home\\Menu.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-16T04:40:10.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GiaoDien.css",
               "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Content\\GiaoDien.css",
               "RelativeDocumentMoniker": "OrderCafe\\Content\\GiaoDien.css",
@@ -149,20 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GiaoDien.cshtml",
-              "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\GiaoDien.cshtml",
-              "RelativeDocumentMoniker": "OrderCafe\\Views\\Home\\GiaoDien.cshtml",
-              "ToolTip": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Home\\GiaoDien.cshtml",
-              "RelativeToolTip": "OrderCafe\\Views\\Home\\GiaoDien.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T04:22:01.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "OrderCafe\\Views\\_ViewStart.cshtml",
@@ -175,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "OrderCafe\\Controllers\\HomeController.cs",
@@ -188,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\RepoOrderCafe\\OrderCafe\\OrderCafe\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "OrderCafe\\Views\\Shared\\Error.cshtml",
