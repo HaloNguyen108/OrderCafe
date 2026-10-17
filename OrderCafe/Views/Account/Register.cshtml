@@ -58,6 +58,12 @@
                             @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger small" })
                         </div>
 
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.IsActive, "tích chọn", htmlAttributes: new { @class = "form-label fw-semibold" })
+                            @Html.CheckBoxFor(model => model.IsActive, new { htmlAttributes = new { @class = "form-control", placeholder = "voi lòng tích chọn" } })
+                            @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger small" })
+                        </div>
+
                         <div class="d-grid gap-2 mt-4">
                             <input type="submit" value="Đăng ký ngay" class="btn btn-success btn-lg fw-bold" />
                         </div>
