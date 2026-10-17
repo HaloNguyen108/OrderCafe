@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\RepoOrderCafe\\OrderCafe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|C:\\RepoOrderCafe\\OrderCafe\\ordercafe\\views\\product\\_productitem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\product\\_productitem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\product\\_productitem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -27,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|c:\\repoordercafe\\ordercafe\\ordercafe\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|C:\\RepoOrderCafe\\OrderCafe\\ordercafe\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2A783D68-35C1-4316-BDA5-5EDB59A1D742}|OrderCafe\\OrderCafe.csproj|solutionrelative:ordercafe\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -106,8 +106,7 @@
               "RelativeToolTip": "OrderCafe\\Views\\Shared\\_MasterLayout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T04:21:48.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T04:21:48.482Z"
             },
             {
               "$type": "Document",
@@ -119,8 +118,7 @@
               "RelativeToolTip": "OrderCafe\\Views\\Home\\GiaoDien.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T04:22:01.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T04:22:01.167Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "OrderCafe\\Content\\GiaoDien.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-16T04:37:36.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T04:37:36.248Z"
             },
             {
               "$type": "Document",
@@ -145,8 +142,7 @@
               "RelativeToolTip": "OrderCafe\\Views\\Shared\\GiaoDien.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-15T14:51:15.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T14:51:15.104Z"
             },
             {
               "$type": "Document",
@@ -171,8 +167,7 @@
               "RelativeToolTip": "OrderCafe\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T06:37:24.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T06:37:24.221Z"
             },
             {
               "$type": "Document",
@@ -184,8 +179,7 @@
               "RelativeToolTip": "OrderCafe\\Views\\Account\\Register.cshtml",
               "ViewState": "AgIAAC8AAAAAAAAAAAAgwEMAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T12:13:35.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T12:13:35.171Z"
             },
             {
               "$type": "Document",
@@ -197,8 +191,7 @@
               "RelativeToolTip": "OrderCafe\\Views\\Account\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T06:38:20.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T06:38:20.462Z"
             },
             {
               "$type": "Document",
@@ -210,8 +203,7 @@
               "RelativeToolTip": "OrderCafe\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T04:22:17.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T04:22:17.599Z"
             },
             {
               "$type": "Document",
@@ -223,8 +215,7 @@
               "RelativeToolTip": "OrderCafe\\Views\\Shared\\CategoryPd.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T10:22:35.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T10:22:35.846Z"
             },
             {
               "$type": "Document",
@@ -236,8 +227,7 @@
               "RelativeToolTip": "OrderCafe\\Views\\Product\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-10-16T10:54:46.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T10:54:46.041Z"
             },
             {
               "$type": "Document",
