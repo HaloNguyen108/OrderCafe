@@ -31,7 +31,10 @@
             }
             else
             {
-                @Html.ActionLink("Đăng nhập", "Index", "Account")
+                <a href="@Url.Action("Index", "Account")"
+                   onclick="var popup = document.getElementById('loginPopup'); if (popup instanceof HTMLDialogElement) { popup.showModal(); return false; }">
+                    Đăng nhập
+                </a>
             }
 
             <a href="@Url.Action("GiaoDien", "Order")">giỏ hàng</a>
