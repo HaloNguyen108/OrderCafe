@@ -18,9 +18,24 @@ namespace OrderCafe.Areas.Admin.Controllers
             return View(category);
         }
 
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Category category)
+        {
+            try
+            {
+                db.Categories.Add(category);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return Content("loi tao category");
+            }
         }
 
         [HttpGet]
@@ -37,5 +52,38 @@ namespace OrderCafe.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+
+            }
+            var category = db.Categories.Where(c => c.CategoryId == id).FirstOrDefault();
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+            return View(category);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            try
+            {
+                var category = db.Categories.Where(c => c.CategoryId == id).FirstOrDefault();
+                db.Categories.Remove(category);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return Content("khong xoa dc vi lien quan den bang khac");
+            }
+        }
+
     }
 }
