@@ -245,7 +245,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Icon.ico" />
     <Content Include="Models\ModelOrderCoffeeDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelOrderCoffeeDB.edmx</DependentUpon>
