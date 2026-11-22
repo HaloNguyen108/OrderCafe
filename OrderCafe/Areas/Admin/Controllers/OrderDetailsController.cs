@@ -17,6 +17,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         // GET: Admin/OrderDetails
         public ActionResult Index()
         {
+            // Include nạp quan hệ đơn hàng và sản phẩm để bảng có thể hiển thị dữ liệu liên quan.
             var orderDetails = db.OrderDetails.Include(o => o.OrderPro).Include(o => o.Product);
             return View(orderDetails.ToList());
         }
@@ -24,6 +25,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         // GET: Admin/OrderDetails/Details/5
         public ActionResult Details(int? id)
         {
+            // Kiểm tra tham số trước khi truy vấn vì khóa chi tiết đơn là bắt buộc.
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -118,6 +120,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            // Xóa chi tiết đơn được chọn theo khóa chính.
             OrderDetail orderDetail = db.OrderDetails.Find(id);
             db.OrderDetails.Remove(orderDetail);
             db.SaveChanges();

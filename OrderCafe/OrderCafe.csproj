@@ -234,6 +234,7 @@
     <Content Include="Content\css\home.css" />
     <Content Include="Content\css\login-popup.css" />
     <Content Include="Content\css\menu.css" />
+    <Content Include="Content\css\test.css" />
     <Content Include="Content\GiaoDien.css" />
     <Content Include="Content\HomePages.css" />
     <Content Include="Content\Images\cape%2810%29.jpg" />
@@ -399,7 +400,6 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Views\ChatBot\" />
   </ItemGroup>

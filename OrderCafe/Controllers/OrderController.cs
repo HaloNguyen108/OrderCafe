@@ -57,10 +57,12 @@ namespace OrderCafe.Controllers
 
             if (!ModelState.IsValid)
             {
+                // Khi dữ liệu form sai, nạp lại giá hiện hành để trang checkout không hiển thị giá cũ trong Session.
                 RefreshCartPrices(cart);
                 return View(model);
             }
 
+            // Truy vấn một lần theo các mã món trong giỏ để kiểm tra tình trạng bán và dùng dữ liệu chuẩn từ CSDL.
             var productIds = cart.Select(item => item.ProductId).Distinct().ToList();
             var products = db.Products.Where(p => productIds.Contains(p.ProductId)).ToList();
 
@@ -77,6 +79,7 @@ namespace OrderCafe.Controllers
             }
 
             var productById = products.ToDictionary(product => product.ProductId);
+            // Dùng kiểu long khi nhân giá với số lượng để phát hiện tổng tiền vượt giới hạn kiểu int của database.
             long totalAmount = cart.Sum(item => (long)productById[item.ProductId].Price * item.Quantity);
             if (totalAmount <= 0 || totalAmount > int.MaxValue)
             {
@@ -98,6 +101,7 @@ namespace OrderCafe.Controllers
                 UserId = customerId.Value
             };
 
+            // Lưu tên và giá tại thời điểm đặt hàng để chi tiết đơn không đổi khi sản phẩm được sửa sau này.
             foreach (var item in cart)
             {
                 var product = productById[item.ProductId];
@@ -117,6 +121,7 @@ namespace OrderCafe.Controllers
                 Status = "Pending"
             });
 
+            // Quan hệ OrderDetails và Payments được lưu cùng đơn trong một lần SaveChanges.
             db.OrderProes.Add(order);
             db.SaveChanges();
 
@@ -177,6 +182,7 @@ namespace OrderCafe.Controllers
 
         private int? GetCustomerId()
         {
+            // Không xem Email trong Session là đủ để xác thực vai trò; chỉ tra khách khi role đúng.
             if (!string.Equals(Session["role"] as string, "Customer", StringComparison.OrdinalIgnoreCase))
                 return null;
 
@@ -195,6 +201,7 @@ namespace OrderCafe.Controllers
 
         private void RefreshCartPrices(List<CartItem> cart)
         {
+            // Giỏ nằm trong Session nên cần đồng bộ lại dữ liệu có thể thay đổi từ database.
             var productIds = cart.Select(item => item.ProductId).Distinct().ToList();
             var products = db.Products.AsNoTracking()
                 .Where(product => productIds.Contains(product.ProductId))
@@ -214,6 +221,7 @@ namespace OrderCafe.Controllers
 
         private OrderPro GetCustomerOrder(int orderId, int customerId)
         {
+            // Ràng buộc đồng thời mã đơn và mã khách để không cho xem đơn của tài khoản khác.
             return db.OrderProes.AsNoTracking()
                 .Include(order => order.OrderDetails)
                 .Include(order => order.Payments)

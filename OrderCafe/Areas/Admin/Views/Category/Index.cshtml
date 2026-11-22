@@ -5,45 +5,64 @@
     Layout = "~/Areas/Admin/Views/Shared/_MasterAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<div class="account-page-heading">
+    <div>
+        <p class="account-eyebrow">QUẢN TRỊ · TÀI KHOẢN</p>
+        <h1>Danh sách danh mục sản phẩm</h1>
+        <p class="account-description">Quản lý danh mục sản phẩm</p>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
+    @Html.ActionLink("Create New", "Create", null, new { @class = "account-add-button" })
+</div>
+@* Bắt đầu bảng dùng để trình bày danh sách dữ liệu theo hàng và cột. *@
+<table class="table admin-table account-table">
     <tr>
         <th>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.CategoryId)
         </th>
         <th>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.CategoryName)
         </th>
         <th>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.IsActive)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(ModelItem => item.CategoryId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CategoryName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsActive)
-        </td>
-        <td>
-            <!-- Nhóm các nút thao tác để chúng nằm cạnh nhau -->
-            <div class="action-buttons">
-                @Html.ActionLink("Edit", "Edit", new { id = item.CategoryId }, new { @class = "btn btn-success" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CategoryId }, new { @class = "btn btn-info" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CategoryId }, new { @class = "btn btn-danger" })
-            </div>
-        </td>
-    </tr>
-}
+    @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayFor(ModelItem => item.CategoryId)
+            </td>
+            <td>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                <!-- Gom các thao tác sản phẩm thành một hàng -->
+                <div class="action-buttons">
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.CategoryId },
+                        new { @class = "account-action action-edit" })
+
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.CategoryId },
+                        new { @class = "account-action action-details" })
+
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.CategoryId },
+                        new { @class = "account-action action-delete" })
+                </div>
+            </td>
+        </tr>
+    }
 
 </table>

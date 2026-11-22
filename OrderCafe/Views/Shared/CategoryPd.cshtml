@@ -11,6 +11,7 @@
 <nav class="category-list" aria-label="Danh mục sản phẩm">
 
     @* Nút xem toàn bộ sản phẩm. *@
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
     @Html.ActionLink(
             "Tất cả thể loại",
             "Index",
@@ -19,6 +20,7 @@
             new { @class = allSelected ? "category-link is-active" : "category-link" })
 
     @* Tạo một nút cho mỗi thể loại trong cơ sở dữ liệu. *@
+    @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
     @foreach (var item in Model)
     {
         // Kiểm tra thể loại này có đang được chọn không.

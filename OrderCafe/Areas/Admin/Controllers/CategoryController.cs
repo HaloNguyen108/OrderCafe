@@ -15,6 +15,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         // GET: Admin/Category
         public ActionResult Index()
         {
+            // Nạp toàn bộ danh mục để quản trị viên xem và chọn thao tác.
             var category = db.Categories.ToList();
             return View(category);
         }
@@ -29,6 +30,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         {
             try
             {
+                // Thêm danh mục mới và lưu thay đổi vào database.
                 db.Categories.Add(category);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -63,6 +65,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Edit(int id, Category category)
         {
+            // Đánh dấu danh mục nhận từ form là bản ghi cần cập nhật.
             db.Entry(category).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -89,6 +92,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         {
             try
             {
+                // Xóa danh mục; database có thể từ chối nếu sản phẩm vẫn tham chiếu danh mục này.
                 var category = db.Categories.Where(c => c.CategoryId == id).FirstOrDefault();
                 db.Categories.Remove(category);
                 db.SaveChanges();

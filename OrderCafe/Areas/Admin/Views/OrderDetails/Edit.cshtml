@@ -7,52 +7,68 @@
 
 <h2>Edit</h2>
 
+@* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
 @using (Html.BeginForm())
 {
+    @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
         <h4>OrderDetail</h4>
         <hr />
+        @* Hiển thị các lỗi kiểm tra chung của model sau khi form được gửi. *@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.OrderDetailId)
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.OrderId, "OrderId", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("OrderId", null, htmlAttributes: new { @class = "form-control" })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.OrderId, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.ProductId, "ProductId", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.UnitPrice, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.UnitPrice, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.UnitPrice, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.Quantity, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -66,5 +82,6 @@
 }
 
 <div>
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
     @Html.ActionLink("Back to List", "Index")
 </div>

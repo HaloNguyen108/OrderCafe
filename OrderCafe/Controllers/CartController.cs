@@ -9,6 +9,7 @@ namespace OrderCafe.Controllers
 {
     public class CartController : Controller
     {
+        // Context Entity Framework dùng để đọc thông tin sản phẩm và giải phóng sau mỗi request.
         private readonly CoffeeOrderDBEntities db =
             new CoffeeOrderDBEntities();
 
@@ -38,6 +39,7 @@ namespace OrderCafe.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddToCart(int id)
         {
+            // Mã sản phẩm được gửi từ form; lấy lại bản ghi để không tin giá do trình duyệt gửi lên.
             // Lấy thông tin và giá từ database.
             var product = db.Products.Find(id);
 
@@ -54,6 +56,7 @@ namespace OrderCafe.Controllers
 
             var cart = GetCart();
 
+            // Mỗi sản phẩm chỉ có một dòng trong giỏ, số lượng được cộng vào dòng đã có.
             var item = cart.FirstOrDefault(x => x.ProductId == id);
 
             if (item == null)
@@ -88,6 +91,7 @@ namespace OrderCafe.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult UpdateCart(int id, int quantity)
         {
+            // Giới hạn số lượng để giữ quy tắc nghiệp vụ đồng nhất với lúc thêm món.
             if (quantity < 1 || quantity > 99)
             {
                 TempData["CartMessage"] =
@@ -97,6 +101,7 @@ namespace OrderCafe.Controllers
             }
 
             var cart = GetCart();
+            // Tìm theo mã sản phẩm vì Session lưu danh sách CartItem độc lập với database.
             var item = cart.FirstOrDefault(x => x.ProductId == id);
 
             if (item != null)
@@ -116,6 +121,7 @@ namespace OrderCafe.Controllers
         public ActionResult RemoveFromCart(int id)
         {
             var cart = GetCart();
+            // Không lỗi nếu mã không còn trong giỏ; thao tác xóa khi đó không làm thay đổi dữ liệu.
             var item = cart.FirstOrDefault(x => x.ProductId == id);
 
             if (item != null)

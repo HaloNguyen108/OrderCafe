@@ -9,6 +9,7 @@ namespace OrderCafe.Areas.Admin.Controllers
 {
     public class homeController : Controller
     {
+        // Context phục vụ các truy vấn thống kê trên dashboard quản trị.
         private readonly CoffeeOrderDBEntities db = new CoffeeOrderDBEntities();
         // GET: Admin/Home
         public ActionResult Index() // Đây là trang mở ra khi vào /Admin.

@@ -12,45 +12,64 @@
 <h2>Thông tin nhận hàng</h2>
 <link rel="stylesheet" href="~/Content/bootstrap.min.css"/>
 <link rel="stylesheet" href="~/Content/GiaoDien.css" />
+@* Hiển thị các lỗi kiểm tra chung của model sau khi form được gửi. *@
 @Html.ValidationSummary(true, "Vui lòng kiểm tra lại thông tin.", new { @class = "text-danger" })
 
 <div class="row" style="margin: 10px">
     <div class="col-md-7">
+        @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
         @using (Html.BeginForm("Checkout", "Order", FormMethod.Post))
         {
+            @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
             @Html.AntiForgeryToken()
             <div class="form-group">
+                @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                 @Html.LabelFor(model => model.ReceiverName, "Tên người nhận")
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.TextBoxFor(model => model.ReceiverName, new { @class = "form-control", maxlength = "100" })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.ReceiverName, "", new { @class = "text-danger" })
             </div>
             <div class="form-group">
+                @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                 @Html.LabelFor(model => model.ReceiverPhone, "Số điện thoại")
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.TextBoxFor(model => model.ReceiverPhone, new { @class = "form-control", maxlength = "10" })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.ReceiverPhone, "", new { @class = "text-danger" })
             </div>
             <div class="form-group">
+                @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                 @Html.LabelFor(model => model.ShippingAddress, "Địa chỉ giao hàng")
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.TextAreaFor(model => model.ShippingAddress, new { @class = "form-control", rows = "3", maxlength = "255" })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.ShippingAddress, "", new { @class = "text-danger" })
             </div>
             <div class="form-group">
+                @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                 @Html.LabelFor(model => model.Note, "Ghi chú")
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.TextAreaFor(model => model.Note, new { @class = "form-control", rows = "2", maxlength = "255" })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
             </div>
             <div class="form-group">
                 <label>Phương thức thanh toán</label><br />
                 <label class="radio-inline">
+                    @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                     @Html.RadioButtonFor(model => model.PaymentMethod, "COD") Thanh toán khi nhận hàng (COD)
-                </label> 
+                </label> <br />
                 <label class="radio-inline">
+                    @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                     @Html.RadioButtonFor(model => model.PaymentMethod, "VNPAY") Thanh toán VNPay Sandbox
                 </label>
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.PaymentMethod, "", new { @class = "text-danger" })
                 <p class="help-block">Đơn sẽ chờ admin xác nhận.</p>
             </div>
             <button type="submit" class="btn btn-primary">Đặt hàng</button>
+            @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
             @Html.ActionLink("Quay lại giỏ hàng", "Index", "Cart", null, new { @class = "btn btn-default" })
         }
     </div>
@@ -58,6 +77,7 @@
     <div class="col-md-5">
         <h3>Đơn hàng</h3>
         <ul class="list-group">
+            @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
             @foreach (var item in cart)
             {
                 <li class="list-group-item">

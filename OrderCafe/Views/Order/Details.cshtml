@@ -10,10 +10,12 @@
 <link rel="stylesheet" href="~/Content/bootstrap.min.css"/>
 <link rel="stylesheet" href="~/Content/GiaoDien.css" />
 <h2>Theo dõi đơn hàng @(Model.OrderCode ?? Model.OrderId.ToString())</h2>
+@* Chỉ hiển thị phần giao diện này khi điều kiện nghiệp vụ đúng. *@
 @if (TempData["Error"] != null)
 {
     <div class="alert alert-danger" role="alert">@TempData["Error"]</div>
 }
+@* Chỉ hiển thị phần giao diện này khi điều kiện nghiệp vụ đúng. *@
 @if (TempData["Success"] != null)
 {
     <div class="alert alert-success" role="alert">@TempData["Success"]</div>
@@ -23,6 +25,7 @@
      role="status"
      data-should-poll="@waitingForAdmin.ToString().ToLowerInvariant()"
      data-check-url="@Url.Action("CheckStatus", "Order", new { id = Model.OrderId })">
+    @* Chỉ hiển thị phần giao diện này khi điều kiện nghiệp vụ đúng. *@
     @if (Model.Status == "Pending" && Model.PaymentMethod == "VNPAY" && Model.PaymentStatus != "Paid")
     {
         <span>Vui lòng thanh toán VNPay trước khi admin có thể xác nhận đơn.</span>
@@ -63,9 +66,11 @@
 </dl>
 
 <h3>Món đã đặt</h3>
+@* Bắt đầu bảng dùng để trình bày danh sách dữ liệu theo hàng và cột. *@
 <table class="table table-bordered">
     <thead><tr><th>Món</th><th>Đơn giá</th><th>Số lượng</th><th>Thành tiền</th></tr></thead>
     <tbody>
+    @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
     @foreach (var item in Model.OrderDetails)
     {
         <tr>
@@ -80,12 +85,16 @@
 </table>
 
 <p>
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
     @Html.ActionLink("Đơn hàng của tôi", "Index", null, new { @class = "btn btn-default" })
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
     @Html.ActionLink("Tiếp tục mua hàng", "Index", "Product", null, new { @class = "btn btn-default" })
+    @* Chỉ hiển thị phần giao diện này khi điều kiện nghiệp vụ đúng. *@
     @if (Model.Status == "Pending" && Model.PaymentMethod == "VNPAY" && Model.PaymentStatus != "Paid")
     {
         using (Html.BeginForm("Pay", "Payment", new { id = Model.OrderId }, FormMethod.Post, new { style = "display:inline" }))
         {
+            @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
             @Html.AntiForgeryToken()
             @*<button type="submit" class="btn btn-primary">Thanh toán / thử lại VNPay Sandbox</button>*@
             <button type="submit" class="btn btn-primary">Thanh toán</button>

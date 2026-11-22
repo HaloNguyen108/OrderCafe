@@ -7,6 +7,7 @@
 
 <h2 class="mb-3">@ViewBag.Title</h2>
 
+@* Chỉ hiển thị phần giao diện này khi điều kiện nghiệp vụ đúng. *@
 @if (!Model.Any())
 {
     <div class="alert alert-warning">Chưa có thể loại này</div>
@@ -14,9 +15,11 @@
 else
 {
     <div class="row">
+        @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
         @foreach (var item in Model)
         {
             @Html.Partial("_ProductItem", item)
+
         }
     </div>
 }

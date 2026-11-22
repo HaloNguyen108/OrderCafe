@@ -12,64 +12,80 @@
     <hr />
     <dl class="product-details">
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.ProductName)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.ProductName)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.Description)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.Description)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.Price)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.Price)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.ImageUrl)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.ImageUrl)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.IsAvailable)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.IsAvailable)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.CreatedAt)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.CreatedAt)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.CategoryId)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.CategoryId)
         </dd>
 
     </dl>
 </div>
 <p>
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
     @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
     @Html.ActionLink("Back to List", "Index")
 </p>

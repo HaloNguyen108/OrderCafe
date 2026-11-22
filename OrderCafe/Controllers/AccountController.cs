@@ -14,6 +14,7 @@ namespace OrderCafe.Controllers
         // GET: Account
         public ActionResult Index(string returnUrl = null)
         {
+            // Giữ địa chỉ người dùng định mở để chuyển về sau khi đăng nhập thành công.
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -21,6 +22,7 @@ namespace OrderCafe.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Authen(string Email, string PasswordHash, string returnUrl)
         {
+            // Tách tìm tài khoản khỏi xác thực để mật khẩu được kiểm tra an toàn bằng PasswordHelper.
             // Tìm admin theo email; không tìm theo cả email và mật khẩu nữa.
             var admin = db.AdminUsers.FirstOrDefault(user => user.Email == Email);
 
@@ -39,6 +41,7 @@ namespace OrderCafe.Controllers
                 Session["FullName"] = admin.FullName;
                 Session["Email"] = admin.Email;
                 Session["role"] = admin.Role;
+                // Admin luôn được đưa về khu vực quản trị sau khi xác thực thành công.
                 return RedirectToAction("Index", "home", new { area = "Admin" });
             }
 
@@ -63,6 +66,7 @@ namespace OrderCafe.Controllers
 
                 if (!string.IsNullOrWhiteSpace(returnUrl) && Url.IsLocalUrl(returnUrl))
                 {
+                    // Chỉ nhận returnUrl nội bộ để tránh chuyển hướng người dùng tới website ngoài.
                     return Redirect(returnUrl);
                 }
 
@@ -78,6 +82,7 @@ namespace OrderCafe.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Logout()
         {
+            // Xóa cả giá trị phiên lẫn phiên hiện tại để tài khoản không còn được xem là đăng nhập.
             Session.Clear();
             Session.Abandon();
             return RedirectToAction("GiaoDien", "Home");
@@ -92,6 +97,7 @@ namespace OrderCafe.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Register(Customer _User)
         {
+            // Xác thực độ mạnh trước khi mã hóa, vì chuỗi hash không còn giữ nguyên định dạng mật khẩu người dùng.
             // Kiểm tra mật khẩu người dùng nhập trước khi thay nó bằng BCrypt hash.
             if (!string.IsNullOrWhiteSpace(_User.PasswordHash)
                 && !System.Text.RegularExpressions.Regex.IsMatch(
@@ -104,6 +110,7 @@ namespace OrderCafe.Controllers
             if (ModelState.IsValid)
             {
                 var check = db.Customers.FirstOrDefault(s => s.Email == _User.Email);
+                // Email là định danh tài khoản nên không cho tạo hai khách hàng trùng email.
                 if(check == null)
                 {
                     // PasswordHash lúc này vẫn là mật khẩu người dùng vừa nhập.

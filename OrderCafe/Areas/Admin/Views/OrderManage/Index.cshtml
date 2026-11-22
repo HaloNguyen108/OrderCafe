@@ -8,12 +8,15 @@
 <h2>Quản lý đơn hàng</h2>
 <p>
 @for (var i = 0; i < statuses.Length; i++) {
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
     @Html.ActionLink(labels[i], "Index", new { status = statuses[i] }, new { @class = "btn btn-default", style = "margin:3px" })
 }
 </p>
+@* Bắt đầu bảng dùng để trình bày danh sách dữ liệu theo hàng và cột. *@
 <table class="table table-bordered table-striped">
     <thead><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Khách hàng</th><th>Điện thoại</th><th>Tổng tiền</th><th>Thanh toán</th><th></th></tr></thead>
     <tbody>
+    @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
     @foreach (var item in Model) {
         <tr>
             <td>@(item.OrderCode ?? item.OrderId.ToString())</td>
@@ -22,6 +25,7 @@
             <td>@item.ReceiverPhone</td>
             <td>@item.TotalAmount.ToString("N0")đ</td>
             <td>@item.PaymentMethod / @item.PaymentStatus</td>
+            @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
             <td>@Html.ActionLink("Chi tiết", "Details", new { id = item.OrderId }, new { @class = "btn btn-primary btn-sm" })</td>
         </tr>
     }

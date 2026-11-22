@@ -17,6 +17,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         // GET: Admin/CustomersAcc
         public ActionResult Index()
         {
+            // Hiển thị danh sách tài khoản khách hàng trong khu vực quản trị.
             return View(db.Customers.ToList());
         }
 
@@ -50,6 +51,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Lưu khách hàng mới sau khi các thuộc tính model hợp lệ.
                 db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -82,6 +84,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Gắn đối tượng nhận từ form vào Entity Framework như một bản ghi đã chỉnh sửa.
                 db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -109,6 +112,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            // Xóa tài khoản khách đã được xác nhận từ form.
             Customer customer = db.Customers.Find(id);
             db.Customers.Remove(customer);
             db.SaveChanges();

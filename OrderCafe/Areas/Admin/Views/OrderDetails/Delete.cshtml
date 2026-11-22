@@ -13,52 +13,65 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.ProductName)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.ProductName)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.UnitPrice)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.UnitPrice)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.Quantity)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.Quantity)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.OrderPro.ReceiverName)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.OrderPro.ReceiverName)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.Product.ProductName)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.Product.ProductName)
         </dd>
 
     </dl>
 
+    @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
     @using (Html.BeginForm()) {
+        @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
+            @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
             @Html.ActionLink("Back to List", "Index")
         </div>
     }

@@ -22,8 +22,10 @@
             </p>
         </div>
 
+        @* Bắt đầu biểu mẫu để thu thập thông tin người dùng nhập. *@
         <form id="cafe-chat-form" method="post"
               action="@Url.Action("Reply", "Chat", new { area = "" })">
+            @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
             @Html.AntiForgeryToken()
 
             <input id="cafe-chat-input" name="message" type="text"

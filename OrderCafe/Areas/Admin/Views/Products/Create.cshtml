@@ -7,68 +7,92 @@
 
 <h2>Create</h2>
 
+@* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
 @using (Html.BeginForm()) 
 {
+    @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
         <h4>Product</h4>
         <hr />
+        @* Hiển thị các lỗi kiểm tra chung của model sau khi form được gửi. *@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.ImageUrl, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.ImageUrl, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.IsAvailable, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
+                    @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                     @Html.EditorFor(model => model.IsAvailable)
+                    @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                     @Html.ValidationMessageFor(model => model.IsAvailable, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.CreatedAt, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.CreatedAt, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.CreatedAt, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
+            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
             @Html.LabelFor(model => model.CategoryId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                 @Html.EditorFor(model => model.CategoryId, new { htmlAttributes = new { @class = "form-control" } })
+                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                 @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -82,5 +106,6 @@
 }
 
 <div>
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
     @Html.ActionLink("Back to List", "Index")
 </div>
