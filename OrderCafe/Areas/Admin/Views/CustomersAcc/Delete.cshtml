@@ -13,68 +13,85 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.FullName)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.FullName)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.Email)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.Email)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.PasswordHash)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.PasswordHash)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.Phone)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.Phone)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.IsActive)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.IsActive)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.CreatedAt)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.CreatedAt)
         </dd>
 
         <dt>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayNameFor(model => model.CustomerCode)
         </dt>
 
         <dd>
+            @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
             @Html.DisplayFor(model => model.CustomerCode)
         </dd>
 
     </dl>
 
+    @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
     @using (Html.BeginForm()) {
+        @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
+            @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
             @Html.ActionLink("Back to List", "Index")
         </div>
     }

@@ -5,69 +5,100 @@
     Layout = "~/Areas/Admin/Views/Shared/_MasterAdmin.cshtml";
 }
 
-<h2>sản phẩm</h2>
-<link rel="stylesheet" href="~/Content/bootstrap.min.css"/>
-<p>
-    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+<div class="account-page-heading">
+    <div>
+        <p class="account-eyebrow">QUẢN TRỊ · TÀI KHOẢN</p>
+        <h1>Danh sách sản phẩm</h1>
+        <p class="account-description">Quản lý sản phẩm.</p>
+    </div>
+
+    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
+    @Html.ActionLink("Create New", "Create", null, new { @class = "account-add-button" })
+</div>
+
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsAvailable)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedAt)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CategoryId)
-        </th>
-        <th></th>
-    </tr>
+@* Bắt đầu bảng dùng để trình bày danh sách dữ liệu theo hàng và cột. *@
+<div class="table-scroll">
+    <table class="table admin-table account-table">
+        <tr>
+            <th>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </th>
+            <th>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayNameFor(model => model.IsAvailable)
+            </th>
+            <th>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsAvailable)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedAt)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CategoryId)
-        </td>
-        <td>
-            <!-- Nhóm các nút thao tác để chúng nằm cạnh nhau -->
-            <div class="action-buttons">
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }, new { @class = "btn btn-success" }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ProductId }, new { @class = "btn btn-info" }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProductId }, new { @class = "btn btn-danger" })
-            </div>        
-        </td>
-    </tr>
-}
+        @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                    @Html.DisplayFor(modelItem => item.ImageUrl)
+                </td>
+                <td>
+                    @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                    @Html.DisplayFor(modelItem => item.IsAvailable)
+                </td>
+                <td>
+                    @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @* Hiển thị giá trị hoặc tên thuộc tính của model theo chế độ chỉ đọc. *@
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    <!-- Gom các thao tác sản phẩm thành một hàng -->
+                    <div class="action-buttons">
+                        @Html.ActionLink("Sửa", "Edit", new { id = item.ProductId },
+                            new { @class = "account-action action-edit" })
 
-</table>
+                        @Html.ActionLink("Chi tiết", "Details", new { id = item.ProductId },
+                            new { @class = "account-action action-details" })
+
+                        @Html.ActionLink("Xóa", "Delete", new { id = item.ProductId },
+                            new { @class = "account-action action-delete" })
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </table>
+</>

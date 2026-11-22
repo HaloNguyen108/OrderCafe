@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/GiaoDien.css"/>
+    <link rel="stylesheet" href="~/Content/GiaoDien.css" />
     <link rel="stylesheet" href="@Url.Content("~/Content/css/base.css")" />
     <link rel="stylesheet" href="@Url.Content("~/Content/css/header.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/css/menu.css")" />
+    <link rel="stylesheet" href="~/Content/css/test.css" />
+    <link rel="stylesheet" href="~/Content/css/menu.css" />
+
     <link rel="stylesheet" href="~/Content/css/footer.css" />
 </head>
 <body>
@@ -27,7 +29,8 @@
     @Html.Partial("_Footer")
     
     @*@Scripts.Render("~/bundles/jquery")
+        @* Nạp các tài nguyên JavaScript hoặc CSS đã được cấu hình cho trang. *@
         @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)*@
+        @RenderSection("scripts", required: false)
 </body>
 </html>

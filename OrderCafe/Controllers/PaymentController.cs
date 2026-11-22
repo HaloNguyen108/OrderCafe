@@ -134,6 +134,7 @@ namespace OrderCafe.Controllers
                 return RedirectToAction("Details", "Order", new { id });
             }
 
+            // Mỗi lần thanh toán dùng giao dịch mới nhất của đơn để gắn mã tham chiếu VNPay.
             var payment = order.Payments.OrderByDescending(item => item.PaymentId).FirstOrDefault();
             if (payment == null) return new HttpStatusCodeResult(400, "Không tìm thấy giao dịch của đơn hàng.");
 
@@ -299,6 +300,7 @@ namespace OrderCafe.Controllers
                 || vnpay.GetResponseData("vnp_Amount") != expectedAmount.ToString(CultureInfo.InvariantCulture))
                 return new HttpStatusCodeResult(400, "Thông tin đơn hàng hoặc số tiền không khớp.");
 
+            // VNPay có thể gọi lại URL kết quả; tránh ghi đè một giao dịch đã được ghi nhận thành công.
             if (payment.Status != "Paid")
             {
                 bool success = vnpay.GetResponseData("vnp_ResponseCode") == "00"

@@ -54,6 +54,7 @@
         </div>
 
         <div class="table-scroll">
+            @* Bắt đầu bảng dùng để trình bày danh sách dữ liệu theo hàng và cột. *@
             <table class="admin-table" style="margin: 5px;">
                 <thead>
                     <tr>
@@ -67,6 +68,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
                     @foreach (var order in Model)
                     {
                         <tr>
@@ -77,6 +79,7 @@
                             <td>@order.PaymentMethod / @order.PaymentStatus</td>
                             <td>@order.Status</td>
                             <td>
+                                @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
                                 @Html.ActionLink(
                                     "Chi tiết",
                                     "Details",

@@ -90,6 +90,7 @@ namespace OrderCafe.Helpers
         // Chữ ký đúng chưa có nghĩa là thanh toán thành công.
         public bool ValidateSignature(string inputHash, string hashSecret)
         {
+            // Kiểm tra độ dài chữ ký HMAC-SHA512 trước khi so sánh với giá trị tính lại.
             if (string.IsNullOrWhiteSpace(inputHash)
                 || inputHash.Length != 128
                 || string.IsNullOrWhiteSpace(hashSecret))
@@ -109,6 +110,7 @@ namespace OrderCafe.Helpers
 
             int difference = 0;
 
+            // So sánh toàn bộ ký tự để hạn chế rò rỉ thông tin qua thời gian dừng sớm khi chữ ký lệch.
             for (int i = 0; i < expectedHash.Length; i++)
             {
                 difference |= expectedHash[i] ^ receivedHash[i];
@@ -121,6 +123,7 @@ namespace OrderCafe.Helpers
         private static string BuildQuery(
             SortedDictionary<string, string> data)
         {
+            // Sắp xếp tham số và mã hóa URL theo cùng quy tắc để chuỗi ký khớp với VNPay.
             var builder = new StringBuilder();
 
             foreach (var item in data)

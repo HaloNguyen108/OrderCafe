@@ -16,30 +16,21 @@
             </p>
 
             <div class="product-actions">
-                @using (Html.BeginForm(
-                    "AddToCart",
-                    "Cart",
-                    new { area = "" },
-                    FormMethod.Post,
-                    null))
+                @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
+                @using (Html.BeginForm("AddToCart","Cart", new { area = "" },FormMethod.Post,null))
                 {
+                    @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
                     @Html.AntiForgeryToken()
 
-                    <input type="hidden"
-                           name="id"
-                           value="@Model.ProductId" />
-
+                    <input type="hidden"name="id"value="@Model.ProductId" />
+                          
                     <button type="submit" class="btn btn-primary">
                         Mua
                     </button>
                 }
 
-                @*@Html.ActionLink(
-                    "Chi tiết",
-                    "Details",
-                    "Product",
-                    new { id = Model.ProductId },
-                    new { @class = "btn btn-primary" })*@
+                @* Tạo liên kết đến action "Details" của controller "Product" với tham số là ID của sản phẩm. *@
+                @Html.ActionLink("Chi tiết","Details","Product",new { id = Model.ProductId },new { @class = "btn product-detail-button" })                   
             </div>
         </div>
     </div>

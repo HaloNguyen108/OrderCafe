@@ -44,8 +44,8 @@ namespace OrderCafe.Controllers
 
             var apiKey = Environment.GetEnvironmentVariable("OLLAMA_API_KEY");
 
-            // Retrieve relevant, current menu records before asking the model.
-            // This is a lightweight lexical retriever suitable for the existing MVC 5 app.
+            // Lấy dữ liệu menu mới nhất trước khi hỏi mô hình để câu trả lời bám sát sản phẩm đang lưu.
+            // Bộ truy xuất so khớp từ khóa đơn giản, phù hợp với cấu trúc ứng dụng MVC5 hiện tại.
             string knowledge;
             try
             {
@@ -141,9 +141,11 @@ namespace OrderCafe.Controllers
 
         private string RetrieveMenuContext(string query)
         {
+            // Chuẩn hóa câu hỏi thành từ khóa và bỏ từ phổ biến để tăng khả năng tìm đúng nội dung liên quan.
             var terms = Normalize(query).Split(new[] { ' ', '\t', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
                 .Where(term => term.Length > 1 && !StopWords.Contains(term)).Distinct().ToArray();
 
+            // Nội dung hướng dẫn tĩnh bổ sung cho dữ liệu sản phẩm lấy trực tiếp từ database.
             var siteText = System.IO.File.ReadAllText(Server.MapPath("~/App_Data/ChatbotKnowledge.txt"));
             var siteSections = siteText.Split(new[] { "\r\n---\r\n", "\n---\n" }, StringSplitOptions.RemoveEmptyEntries);
             var siteMatches = siteSections.Select(section => new
@@ -159,6 +161,7 @@ namespace OrderCafe.Controllers
 
             using (var db = new CoffeeOrderDBEntities())
             {
+                // Đưa thống kê và danh sách món vào ngữ cảnh để mô hình trả lời dựa trên dữ liệu thực.
                 var products = db.Products.Include("Category").ToList();
                 var categories = db.Categories.ToList();
                 var menuStats = string.Format(CultureInfo.InvariantCulture,
@@ -206,6 +209,7 @@ namespace OrderCafe.Controllers
 
         private static string Normalize(string value)
         {
+            // Bỏ dấu tiếng Việt và ký tự phân tách để tìm được từ khóa dù người dùng gõ có dấu hay không.
             var decomposed = (value ?? "").ToLowerInvariant().Normalize(NormalizationForm.FormD);
             var result = new StringBuilder();
             foreach (var character in decomposed)

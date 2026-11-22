@@ -1,4 +1,4 @@
-/* Tạo khoảng cách quanh khu vực menu. */
+﻿/* Tạo khoảng cách quanh khu vực menu. */
 .category-sidebar,
 .menu-content {
     padding-top: 28px; /* Tách nội dung khỏi thanh đầu trang. */
@@ -187,6 +187,7 @@
     background: #fffdf8; /* Dùng nền sáng để nhãn nổi trên nền xanh. */
     color: #294734; /* Dùng chữ xanh rêu. */
 }
+
 
 /* Trên điện thoại, giảm chiều cao ảnh để dành chỗ cho nội dung. */
 @media (max-width: 600px) {

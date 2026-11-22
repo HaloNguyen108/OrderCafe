@@ -9,15 +9,18 @@
 <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
 <link rel="stylesheet" href="~/Content/GiaoDien.css" />
 <h2>Đơn hàng của tôi</h2>
+@* Chỉ hiển thị phần giao diện này khi điều kiện nghiệp vụ đúng. *@
 @if (!Model.Any())
 {
     <p>Bạn chưa có đơn hàng nào.</p>
 }
 else
 {
+    @* Bắt đầu bảng dùng để trình bày danh sách dữ liệu theo hàng và cột. *@
     <table class="table table-bordered">
         <thead><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Trạng thái</th><th>Thanh toán</th><th>Tổng tiền</th><th></th></tr></thead>
         <tbody>
+            @* Lặp qua các phần tử của model để dựng giao diện cho từng bản ghi. *@
             @foreach (var order in Model)
             {
                 <tr>
@@ -26,10 +29,12 @@ else
                     <td>@(order.Status == "Shipping" ? "Đang chuẩn bị / giao hàng" : order.Status)</td>
                     <td>@order.PaymentMethod / @order.PaymentStatus</td>
                     <td>@order.TotalAmount.ToString("N0", CultureInfo.GetCultureInfo("vi-VN"))đ</td>
+                    @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
                     <td>@Html.ActionLink("Theo dõi đơn", "Details", new { id = order.OrderId }, new { @class = "btn btn-primary btn-sm" })</td>
                 </tr>
             }
         </tbody>
     </table>
 }
+@* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
 <p>@Html.ActionLink("Tiếp tục mua hàng", "Index", "Product", null, new { @class = "btn btn-default" })</p>

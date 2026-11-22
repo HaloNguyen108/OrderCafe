@@ -50,8 +50,10 @@
             <h2 id="loginPopupTitle">Đăng nhập tài khoản</h2>
         </div>
 
+        @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
         @using (Html.BeginForm("Authen", "Account", new { area = "" }, FormMethod.Post, new { id = "popupLoginForm" }))
         {
+            @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
             @Html.AntiForgeryToken()
 
             <div class="login-field">
@@ -78,7 +80,9 @@
         </p>
     </dialog>
 
+    @* Nạp các tài nguyên JavaScript hoặc CSS đã được cấu hình cho trang. *@
     @Scripts.Render("~/bundles/jquery")
+    @* Nạp các tài nguyên JavaScript hoặc CSS đã được cấu hình cho trang. *@
     @Scripts.Render("~/bundles/bootstrap")
 
     <script src="@Url.Content("~/Scripts/login-popup.js")"></script>

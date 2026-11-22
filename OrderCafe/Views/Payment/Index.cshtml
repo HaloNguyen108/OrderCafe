@@ -13,8 +13,10 @@
 
     <p>Số tiền thử: 10.000đ</p>
 
+    @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
     @using (Html.BeginForm("Create", "Payment", FormMethod.Post))
     {
+        @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
         @Html.AntiForgeryToken()
 
         <button type="submit">

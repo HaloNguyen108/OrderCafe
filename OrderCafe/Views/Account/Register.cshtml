@@ -21,29 +21,43 @@
 
                     <h2 class="text-center mb-4">Đăng ký tài khoản</h2>
 
+                    @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
                     @using (Html.BeginForm("Register", "Account", FormMethod.Post))
                     {
+                        @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
                         @Html.AntiForgeryToken()
+                        @* Hiển thị các lỗi kiểm tra chung của model sau khi form được gửi. *@
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
                         <div class="form-group">
+                            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                             @Html.LabelFor(m => m.FullName)
+                            @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                             @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+                            @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                             @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
+                            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                             @Html.LabelFor(m => m.Email)
+                            @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                             @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+                            @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
+                            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                             @Html.LabelFor(m => m.Phone)
+                            @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                             @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", maxlength = 10 })
+                            @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                             @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
+                            @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                             @Html.LabelFor(m => m.PasswordHash, "Password")
                             <div class="position-relative">
+                                @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                                 @Html.PasswordFor(m => m.PasswordHash, new { @class = "form-control", id = "pwd", style = "padding-right: 40px;" })
                                 <!-- Icon: Dùng onclick để gọi hàm đổi trạng thái -->
                                 <span class="position-absolute top-50 translate-middle-y end-0 pe-3"
@@ -61,12 +75,14 @@
                                   ">
                                     <i class="fa-solid fa-eye"></i>
                                 </span>
+                                @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                                 @Html.ValidationMessageFor(m => m.PasswordHash, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group text-center mt-4">
                             <button type="submit" class="btn btn-primary px-4">Đăng ký</button>
+                            @* Tạo liên kết điều hướng đến action được chỉ định trong ứng dụng MVC. *@
                             @Html.ActionLink("Đã có tài khoản? Đăng nhập", "Index", "Account", null, new { @class = "btn btn-link" })
                         </div>
                     }
@@ -79,4 +95,5 @@
 </div>
 <!-- KẾT THÚC PHẦN CHỈNH SỬA -->
 
+@* Nạp các tài nguyên JavaScript hoặc CSS đã được cấu hình cho trang. *@
 @section Scripts { @Scripts.Render("~/bundles/jqueryval") }

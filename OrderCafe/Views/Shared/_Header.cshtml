@@ -14,6 +14,7 @@
             <a href="@Url.Action("Index", "Cart", new { area = "" })" class="text-decoration-none" style="color: black;">
                 <i class="fa-solid fa-cart-shopping"></i> Giỏ hàng
             </a>
+            @* Chỉ hiển thị phần giao diện này khi điều kiện nghiệp vụ đúng. *@
             @if (string.Equals(Session["role"] as string, "Customer", StringComparison.OrdinalIgnoreCase))
             {
                 <a href="@Url.Action("Index", "Order", new { area = "" })">Đơn hàng của tôi</a>
@@ -21,6 +22,7 @@
             <span aria-disabled="true" title="Ưu đãi đang được cập nhật">Ưu đãi (đang cập nhật)</span>
             <a href="@Url.Action("ThongTin", "Home", new { area = "" })">Thông tin</a>
 
+            @* Chỉ hiển thị phần giao diện này khi điều kiện nghiệp vụ đúng. *@
             @if (Session["FullName"] != null)
             {
                 string fullName = (Session["FullName"] as string ?? "").Trim();
@@ -33,8 +35,10 @@
                         @shortName &#9662;
                     </button>
                     <div class="user-dd-menu">
+                        @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
                         @using (Html.BeginForm("Logout", "Account", FormMethod.Post))
                         {
+                            @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
                             @Html.AntiForgeryToken()
                             <button type="submit">Đăng xuất</button>
                         }

@@ -15,6 +15,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         // GET: Admin/Products
         public ActionResult Index()
         {
+            // Lấy danh sách sản phẩm để trang quản trị hiển thị bảng dữ liệu.
             var products = db.Products.ToList();
             return View(products);
         }
@@ -29,6 +30,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         {
             try
             {
+                // Gắn sản phẩm mới vào context rồi gửi thay đổi xuống database.
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -50,6 +52,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Edit(int id, Product product)
         {
+            // Đánh dấu toàn bộ model nhận từ form là cần cập nhật theo cách hiện tại của controller.
             db.Entry(product).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -74,6 +77,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
+            // Nạp đúng bản ghi theo khóa trước khi yêu cầu Entity Framework xóa.
             var product = db.Products.Find(id);
             db.Products.Remove(product);
             db.SaveChanges();

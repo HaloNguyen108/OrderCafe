@@ -1,0 +1,86 @@
+﻿/* Xếp hai nút trên cùng một hàng */
+.product-actions {
+    display: flex !important;
+    align-items: stretch;
+    gap: 10px; /* Tạo khoảng cách giữa hai nút */
+}
+
+    /* Chia đều chiều rộng cho form Mua và liên kết Chi tiết */
+    .product-actions > form,
+    .product-actions > a {
+        flex: 1 1 0 !important;
+        min-width: 0;
+        margin: 0;
+    }
+
+        /* Cho hai nút rộng bằng nhau và căn chữ vào giữa */
+        .product-actions > form button,
+        .product-actions > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100% !important;
+            min-height: 48px;
+            text-align: center;
+        }
+
+/* Đặt ảnh bên trái và thông tin bên phải */
+.product-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+    margin: 20px 0;
+}
+
+/* Giới hạn ảnh vừa với cột */
+.product-detail-image {
+    display: block;
+    width: 200px;
+    max-width: 420px;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Định dạng giá sản phẩm */
+.product-detail-price {
+    color: #8b6535;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Đặt hai nút cạnh nhau */
+.product-detail-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+    .product-detail-actions form {
+        margin: 0;
+    }
+
+/* Kiểu chung cho hai nút */
+.product-buy-button,
+.product-back-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #365b43;
+    border-radius: 6px;
+    background: #365b43;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Trên điện thoại, chuyển ảnh lên trên thông tin */
+@media (max-width: 700px) {
+    .product-detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .product-detail-image {
+        height: 260px;
+    }
+}

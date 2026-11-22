@@ -13,16 +13,19 @@ namespace OrderCafe.Controllers
         
         public ActionResult GiaoDien()
         {
+            // Chỉ định rõ view trang chủ dùng chung thay vì dựa vào tên action.
             return View("GiaoDien");
         }
 
         public ActionResult ThongTin()
         {
+            // MVC tự tìm view Home/ThongTin.cshtml theo tên action.
             return View();
         }
 
         public ActionResult DangNhap()
         {
+            // Action này cung cấp trang đăng nhập theo luồng giao diện hiện có.
             return View();
         }
 

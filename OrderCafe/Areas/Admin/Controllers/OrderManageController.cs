@@ -20,6 +20,7 @@ namespace OrderCafe.Areas.Admin.Controllers
 
         public ActionResult Index(string status = "Pending")
         {
+            // Chỉ nhận các trạng thái được hệ thống hỗ trợ để tránh lọc bằng giá trị ngoài quy ước.
             if (!OrderStatuses.Contains(status)) status = "Pending";
             ViewBag.Status = status;
             var orders = db.OrderProes.AsNoTracking()
@@ -44,6 +45,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Confirm(int id)
         {
+            // Giao dịch Serializable giúp đọc trạng thái và cập nhật đơn không bị chen ngang bởi yêu cầu khác.
             using (var transaction = db.Database.BeginTransaction(IsolationLevel.Serializable))
             {
                 var order = FindForUpdate(id);
@@ -68,6 +70,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Cancel(int id)
         {
+            // Dùng cùng mức cô lập khi huỷ để không ghi đè thao tác cập nhật đồng thời.
             using (var transaction = db.Database.BeginTransaction(IsolationLevel.Serializable))
             {
                 var order = FindForUpdate(id);
@@ -89,6 +92,7 @@ namespace OrderCafe.Areas.Admin.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult ChangeStatus(int id, string newStatus)
         {
+            // Chỉ cho chuyển theo quy trình: Confirmed → Shipping → Completed.
             using (var transaction = db.Database.BeginTransaction(IsolationLevel.Serializable))
             {
                 var order = FindForUpdate(id);
@@ -102,6 +106,7 @@ namespace OrderCafe.Areas.Admin.Controllers
                 order.Status = newStatus;
                 if (newStatus == "Completed" && order.PaymentMethod == "COD")
                 {
+                    // Với COD, chỉ đánh dấu đã thu tiền khi đơn được hoàn tất.
                     order.PaymentStatus = "Paid";
                     var pendingPayments = db.Payments.Where(p => p.OrderId == id && p.Status == "Pending").ToList();
                     foreach (var payment in pendingPayments)
