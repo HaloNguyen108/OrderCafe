@@ -83,19 +83,14 @@ namespace OrderCafe.Controllers
 
             vnpay.AddRequestData("vnp_CurrCode", "VND");
             vnpay.AddRequestData("vnp_TxnRef", transactionRef);
-            vnpay.AddRequestData(
-                "vnp_OrderInfo",
-                "Thanh toan thu OrderCafe " + transactionRef);
+            vnpay.AddRequestData("vnp_OrderInfo", "Thanh toan thu OrderCafe " + transactionRef);
 
             vnpay.AddRequestData("vnp_OrderType", "other");
             vnpay.AddRequestData("vnp_Locale", "vn");
             vnpay.AddRequestData("vnp_ReturnUrl", returnUrl);
             vnpay.AddRequestData("vnp_IpAddr", ipAddress);
 
-            vnpay.AddRequestData(
-                "vnp_CreateDate",
-                now.ToString("yyyyMMddHHmmss",
-                    CultureInfo.InvariantCulture));
+            vnpay.AddRequestData("vnp_CreateDate", now.ToString("yyyyMMddHHmmss", CultureInfo.InvariantCulture));
 
             vnpay.AddRequestData(
                 "vnp_ExpireDate",

@@ -27,13 +27,16 @@
                         @* Sinh mã chống giả mạo yêu cầu để máy chủ xác nhận form được gửi từ website. *@
                         @Html.AntiForgeryToken()
                         @Html.Hidden("returnUrl", (string)ViewBag.ReturnUrl)
+
                         @* Hiển thị các lỗi kiểm tra chung của model sau khi form được gửi. *@
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                         <div class="form-group">
                             @* Tạo nhãn gắn với thuộc tính model để người dùng biết nội dung cần nhập hoặc xem. *@
                             @Html.LabelFor(m => m.Email)
+
                             @* Tạo điều khiển form liên kết với thuộc tính model để gửi giá trị về controller. *@
                             @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+
                             @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>

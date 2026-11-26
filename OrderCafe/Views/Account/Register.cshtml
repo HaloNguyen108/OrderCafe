@@ -21,6 +21,13 @@
 
                     <h2 class="text-center mb-4">Đăng ký tài khoản</h2>
 
+                    @if (ViewBag.error != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.error
+                        </div>
+                    }
+
                     @* Gửi dữ liệu biểu mẫu đến action được chỉ định; action này xử lý thao tác tạo hoặc cập nhật. *@
                     @using (Html.BeginForm("Register", "Account", FormMethod.Post))
                     {
@@ -64,11 +71,12 @@
                                       style="cursor: pointer; z-index: 10;"
                                       onclick="
                                     var pwd = document.getElementById('pwd');
-                                    var icon = this.querySelector('i');
+                                    var icon = this.querySelector('i');    
                                     if (pwd.type === 'password') {
                                         pwd.type = 'text';
                                         icon.className = 'fa-solid fa-eye-slash';
-                                    } else {
+                                    }
+                                    else {
                                         pwd.type = 'password';
                                         icon.className = 'fa-solid fa-eye';
                                     }
