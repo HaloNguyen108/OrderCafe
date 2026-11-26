@@ -15,6 +15,7 @@
     text-transform: uppercase; /* Tự chuyển chữ thành IN HOA */
     letter-spacing: 2px; /* Giãn chữ */
     font-size: 13px; /* Cỡ chữ nhỏ */
+    font: 'Segoe UI'
 }
 
 /* Mỗi khối nội dung của trang */

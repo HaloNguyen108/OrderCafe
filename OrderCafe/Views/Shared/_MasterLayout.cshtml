@@ -15,7 +15,7 @@
 </head>
 <body>
     @Html.Partial("_Header")
-    <div class="container">
+    <main class="container page-main">
         <div class="row">
             <div class="col-md-3 category-sidebar">
                 <h3 class="category-title">Danh mục thể loại</h3>
@@ -25,7 +25,7 @@
                 @RenderBody()
             </div>
         </div>
-    </div>
+    </main>
     @Html.Partial("_Footer")
     
     @*@Scripts.Render("~/bundles/jquery")

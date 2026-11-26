@@ -5,6 +5,17 @@
     padding-bottom: 36px; /* Tạo khoảng cách trước footer. */
 }
 
+/* Giữ footer sát đáy màn hình khi trang có ít nội dung. */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-main {
+    flex: 1 0 auto;
+}
+
 /* Làm tiêu đề danh mục rõ hơn. */
 .category-title {
     margin: 0 0 10px; /* Giữ tiêu đề gần danh sách để bố cục gọn hơn. */
