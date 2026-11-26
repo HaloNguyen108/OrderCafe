@@ -147,15 +147,18 @@ a:focus-visible {
 header.top {
     background: #fffdf8;
     border-bottom: 1px solid #e4dacb;
+            position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header.top .bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 4px 0;
-}
+    header.top .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 4px 0;
+    }
 
 header.top .logo {
     color: #4d3925;
@@ -486,4 +489,17 @@ h3 {
         grid-template-columns: 1fr;
     }
 }
-
+body,
+body *:not(i[class*="fa-"]) {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+.hero h1,
+.info h2,
+.card h3,
+.about-intro h1,
+.about-section h2,
+.about-cards h3,
+.about-hours h3 {
+    font-weight: 600;
+    letter-spacing: normal;
+}

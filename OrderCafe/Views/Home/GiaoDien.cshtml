@@ -1,16 +1,18 @@
-﻿<link rel="stylesheet" href="@Url.Content("~/Content/HomePages.css")" />
+<link rel="stylesheet" href="@Url.Content("~/Content/HomePages.css")" />
 @{
     ViewBag.Title = "Trang Chu";
     Layout = "~/Views/Shared/_GiaoDien.cshtml";
 }
 
-<section class="hero" id="trangchu">
-    <div class="wrap">
-        <span class="eyebrow">Hạt Coffee · Since 2026</span>
-        <h1>Hạt Coffee</h1>
+<section class="hero" id="trangchu" aria-labelledby="hero-title">
+    <img class="hero-photo" src="@Url.Content("~/Content/Images/nenCafe.jpg")" alt="Ly cà phê đặc trưng của Hạt Coffee" />
+    <div class="wrap hero-content">
+        <span class="eyebrow">Hạt Coffee · Rang xay mỗi ngày</span>
+        <h1 id="hero-title">Một tách cà phê,<br />một khoảng thảnh thơi.</h1>
+        <p class="hero-description">Ghé Hạt để thưởng thức cà phê ngon, tìm một góc dễ chịu và chậm lại giữa nhịp sống Sài Gòn.</p>
         <div class="cta">
-            <a class="btn gold" href="#gioithieu">Về quán</a>
-            <a class="btn line" href="#thongtin">Giờ mở cửa &amp; địa chỉ</a>
+            <a class="btn gold" href="@Url.Action("Index", "Product", new { area = "" })">Xem menu</a>
+            <a class="btn line" href="@Url.Action("Index", "Product", new { area = "" })">Đặt ngay <span aria-hidden="true">&rarr;</span></a>
         </div>
     </div>
 </section>
