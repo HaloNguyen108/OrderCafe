@@ -124,7 +124,7 @@ namespace OrderCafe.Controllers
                 else
                 {
                     ViewBag.error = "email da duoc su dung vui long su dung emai khac!";
-                    return View();
+                    return View(_User);
                 }
             }
             return View();
