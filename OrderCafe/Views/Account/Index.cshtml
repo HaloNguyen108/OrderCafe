@@ -70,6 +70,10 @@
                                       ">
                                     <i class="fa-solid fa-eye"></i>
                                 </span>
+                                @if (!string.IsNullOrEmpty(ViewBag.LoginErrorMess as string))
+                                {
+                                    <div class="text-danger small mt-1">@ViewBag.LoginErrorMess</div>
+                                }
                                 @* Hiển thị lỗi kiểm tra ngay cạnh trường dữ liệu tương ứng. *@
                                 @Html.ValidationMessageFor(m => m.PasswordHash, "", new { @class = "text-danger" })
                             </div>
